@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './FormContacts.module.scss';
@@ -36,8 +36,8 @@ class FormContacts extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handlSubmit}>
-        <label>
+      <form onSubmit={this.handlSubmit} className={styles.form}>
+        <label className={styles.label}>
           Name
           <input
             type="text"
@@ -49,7 +49,8 @@ class FormContacts extends React.Component {
             onChange={this.handlChange}
           />
         </label>
-        <label>
+
+        <label className={styles.label}>
           Number
           <input
             type="tel"
@@ -61,6 +62,7 @@ class FormContacts extends React.Component {
             onChange={this.handlChange}
           />
         </label>
+
         <button type="submit" className={styles.button}>
           Add contact
         </button>

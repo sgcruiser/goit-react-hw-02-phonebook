@@ -6,7 +6,7 @@ import FormContacts from '../FormContacts/FormContacts';
 import SearchContacts from '../SearchContacts/SearchContacts';
 import ContactsList from '../ContactsList/ContactsList';
 
-// import styles from './Phonebook.scss';
+import styles from './Phonebook.module.scss';
 
 class Phonebook extends React.Component {
   static defaultsProps = {};
@@ -46,7 +46,7 @@ class Phonebook extends React.Component {
     );
 
     return (
-      <div>
+      <div className={styles.phonebook}>
         <Section title="Phonebook">
           <FormContacts onSubmit={this.formSubmitHandler} />
         </Section>
